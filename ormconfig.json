@@ -1,9 +1,10 @@
 {
-  "type": "sqlite",
-  "database": "./database.sqlite",
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "Sahebi",
+  "password": "***********",
+  "database": "todoapp",
   "synchronize": "true",
-  "entities": ["dist/books/db/**/*.js"],
-  "cli": {
-    "entitiesDir": "src/db/entity"
-  }
+  "entities": ["dist/**/**.entity{.ts,.js}"]
 }

@@ -14,7 +14,7 @@ import { UserService } from './user.service';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @ApiResponse({ status: 200, description: 'insert new user' })
+  @ApiResponse({ status: 201, description: 'insert new user' })
   @Header('Content-Type', 'application/json')
   @Post('post')
   postUser(@Body() user: CreateUserDTO) {
@@ -28,6 +28,7 @@ export class UserController {
   }
 
   @ApiResponse({ status: 200, description: 'get books of a user' })
+  @ApiResponse({ status: 400, description: 'validation failed' })
   @ApiQuery({
     name: 'userID',
     required: true,

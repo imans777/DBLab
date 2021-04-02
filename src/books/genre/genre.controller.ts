@@ -7,7 +7,7 @@ import { GenreService } from './genre.service';
 export class GenreController {
   constructor(private readonly genreServices: GenreService) {}
 
-  @ApiResponse({ status: 200, description: 'insert new genre' })
+  @ApiResponse({ status: 201, description: 'insert new genre' })
   @Header('Content-Type', 'application/json')
   @Post('post')
   postGenre(@Body() genre: CreateGenreDTO) {
