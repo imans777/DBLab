@@ -1,4 +1,5 @@
 export default class CreateProjectDTO {
+  readonly eid: number;
   readonly title: string;
   readonly description: string;
   readonly deadline: Date;
@@ -6,5 +7,4 @@ export default class CreateProjectDTO {
   readonly attachedFileLink: string; // optional
   readonly talentGuarantee: number;
   readonly requiredTalents: string; // optional
-  readonly submissionDate: Date;
 }

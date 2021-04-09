@@ -24,13 +24,13 @@ export default class EmployeeEntity extends BaseEntity {
   @Column({ nullable: true })
   credibility: number;
 
-  @Column()
+  @Column({ nullable: true })
   talents: string;
 
-  @Column()
+  @Column({ nullable: true })
   experiences: string;
 
-  @Column()
+  @Column({ nullable: true })
   academicInfo: string;
 
   @OneToMany(() => RequestEntity, (requested) => requested.employee)

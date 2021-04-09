@@ -26,13 +26,13 @@ export default class ProjectEntity extends BaseEntity {
   @Column()
   budget: number;
 
-  @Column({ length: 500 })
+  @Column({ nullable: true, length: 500 })
   attachedFileLink: string;
 
   @Column()
   talentGuarantee: number;
 
-  @Column()
+  @Column({ nullable: true })
   requiredTalents: string;
 
   @Column()
